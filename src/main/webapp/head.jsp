@@ -5,7 +5,7 @@
 
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>Cathie's Demo - ${title}</title>
+    <title>Tom's Demo - ${title}</title>
 
     <!-- used for add, edit, delete icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
