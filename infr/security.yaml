@@ -43,7 +43,7 @@ Resources:
           Ref: "WebEC2InstanceRole"
 
 Outputs:
-  WebSecurityGroupId:
+  WebServerSecurityGroupId:
     Description: "Web Server Security Group ID"
     Value: !GetAtt WebServerSecurityGroup.GroupId
     Export:
