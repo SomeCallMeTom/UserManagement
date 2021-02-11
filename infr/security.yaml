@@ -47,7 +47,7 @@ Outputs:
     Description: "Web Server Security Group ID"
     Value: !GetAtt WebServerSecurityGroup.GroupId
     Export:
-      Name: !Sub "${AWS::StackName}-SecurityGroupID"
+      Name: !Sub "${AWS::StackName}-WebServerSecurityGroupID"
 
 
   WebEC2InstanceProfile:
