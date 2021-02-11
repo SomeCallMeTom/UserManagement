@@ -50,3 +50,6 @@ fabric.properties
 
 #keys
 /keys/
+
+#secret
+/secret/
