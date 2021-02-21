@@ -26,4 +26,16 @@ Step 3: Run the java application in Tomcat application server
 Step 4: Open the java application
   1. Expand the Tomcat Server and right click on UserMangement and select 'Open in Browser'.  You could also navigate to http://localhost:8080/UserManagement
 
-I'm making a test change
+Follow the following to launch correctly in CloudFormation
+
+1. Create vpc stack named:
+user-management-vpc
+    from vpc.yaml
+2. Create security stack named:
+user-management-security
+    from security.yaml
+3. Create web stack named:
+user-management-web
+    from webserver.yaml
+4. Wait 4-5 minutes before using the output of user-management-web
+
