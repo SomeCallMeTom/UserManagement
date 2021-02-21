@@ -9,3 +9,4 @@ user-management-security
 3. Create web stack named:
 user-management-web
     from webserver.yaml
+4. Wait 4-5 minutes before using the output of user-management-web
