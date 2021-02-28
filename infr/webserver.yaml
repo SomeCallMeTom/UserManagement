@@ -2,7 +2,7 @@ Description: This template is to build the webserver for usermanagement
 
 Parameters:
   Stage:
-    Description: The stage to which this will be deployed
+    Description: The environment to which this will be deployed
     Type: String
     Default: dev
   InstanceType:
