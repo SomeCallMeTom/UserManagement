@@ -1,6 +1,10 @@
 Description: This template is to build the webserver for usermanagement
 
 Parameters:
+  Stage:
+    Description: The stage to which this will be deployed
+    Type: String
+    Default: dev
   InstanceType:
     Description: The AWS Type of the webserver
     Type: String
@@ -43,7 +47,7 @@ Resources:
         Tags: 
           - 
             Key: "Name"
-            Value: !Sub "${AWS::StackName}"
+            Value: !Join [ "-", [user-management-web, !Ref Stage ]]
 Outputs:
   WebServerURL:
     Description: "URL to access our Tomcat Server"
