@@ -100,6 +100,14 @@ Resources:
         - Key: Name
           Value: !Sub ${EnvironmentName} Private Subnet (AZ2)
 
+  DBSubnetGroup:
+    Properties:
+      DBSubnetGroupDescription: DBSubnetGroup for RDS instances
+      SubnetIds:
+      - !Ref PrivateSubnet1
+      - !Ref PrivateSubnet2
+    Type: AWS::RDS::DBSubnetGroup
+
   PublicRouteTable:
     Type: AWS::EC2::RouteTable
     Properties:
@@ -195,3 +203,9 @@ Outputs:
     Value: !Ref PrivateSubnet2
     Export:
       Name: !Sub "${AWS::StackName}-PrivateSubnet2"
+  
+  DBSubnetGroup:
+    Description: A reference to the DBSubnetGroup for RDS instances
+    Value: !Ref DBSubnetGroup
+    Export:
+      Name: !Sub "${AWS::StackName}-DBSubnetGroup"
