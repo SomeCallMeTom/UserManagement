@@ -67,8 +67,8 @@ Outputs:
     Export:
       Name: !Sub "${AWS::StackName}-WebEC2InstanceProfile"
 
-  DBSecurityGroupId:
+  DBSecurityGroup:
     Description: "DB Security Group ID"
-    Value: !GetAtt DBSecurityGroup.GroupId
+    Value: !Ref DBSecurityGroup
     Export:
-      Name: !Sub "${AWS::StackName}-DBSecurityGroupId"
+      Name: !Sub "${AWS::StackName}-DBSecurityGroup"
