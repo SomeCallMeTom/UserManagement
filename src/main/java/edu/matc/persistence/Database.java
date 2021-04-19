@@ -36,10 +36,10 @@ public class Database {
         try {
             log.info("Starting to load properties");
             if("dev".equals(System.getenv("Stage"))) {
-                properties.load(this.getClass().getResourceAsStream("/database-staging.properties"));
+                properties.load(this.getClass().getResourceAsStream("/database-dev.properties"));
             }
             else if("staging".equals(System.getenv("Stage"))) {
-                properties.load(this.getClass().getResourceAsStream("/database-dev.properties"));
+                properties.load(this.getClass().getResourceAsStream("/database-staging.properties"));
             }
             else{
                 properties.load(this.getClass().getResourceAsStream("/database.properties"));
