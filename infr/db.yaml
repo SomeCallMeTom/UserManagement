@@ -12,7 +12,7 @@ Parameters:
     Default: "dev"
   DBSnapshotName:
     Type: String
-    Default: "users-dev"
+    Default: "user-dev"
 Resources:
   DatabaseInstance:
        Type: AWS::RDS::DBInstance
